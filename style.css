@@ -5,12 +5,23 @@
   scroll-behavior: smooth;
 }
 :root {
-  --mainColor--: ;
+  --mainColor--: #000123;
   --BtnColor--: #ff0f7b;
 }
 body {
   background-color: black;
   font-family: "Cousine", monospace;
+  height: 650vh;
+}
+
+.lockNone {
+  display: none;
+}
+.lockNone1 {
+  display: none;
+}
+.lockNone2 {
+  display: none;
 }
 button {
   cursor: pointer;
@@ -62,6 +73,8 @@ button {
   background-color: white;
   justify-content: space-evenly;
   align-items: center;
+  position: fixed;
+  z-index: 1000;
 }
 ul {
   list-style: none;
@@ -79,8 +92,8 @@ li:hover {
   border-bottom: 2px solid var(--BtnColor--);
   color: var(--BtnColor--);
 }
-#signUp,
-#signIn {
+.signUp,
+.signIn {
   border: 1px solid var(--BtnColor--);
   padding: 5px;
   width: 15%;
@@ -89,12 +102,18 @@ li:hover {
   border-radius: 50px;
   transition: 0.5s all;
   cursor: pointer;
+  z-index: 111;
 }
-#signUp:hover,
-#signIn:hover {
+
+.signUp:hover,
+.signIn:hover {
   box-shadow: inset 0 0 0px 60px var(--BtnColor--);
   color: white;
   font-size: 16px;
+}
+.signActive {
+  background-color: var(--BtnColor--);
+  color: white;
 }
 .Cercle {
   width: 50%;
@@ -107,16 +126,21 @@ li:hover {
   align-items: center;
   justify-content: center;
 }
+
+.allpage {
+  display: block !important ;
+}
+
 .fristPage {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 .gtasidi {
-  width: 500px;
-  height: 500px;
+  width: 80%;
+  cursor: pointer;
   border-radius: 50%;
   z-index: 100;
   position: relative;
@@ -135,3 +159,488 @@ li:hover {
     transform: rotate(360deg);
   }
 }
+.social {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  border-radius: 100%;
+}
+i {
+  position: absolute;
+  left: 4%;
+  color: aliceblue;
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+#fa:hover {
+  color: #4267b2;
+}
+#twit {
+  margin-bottom: 60%;
+  left: 16.5%;
+}
+#twit:hover {
+  color: #1da1f2;
+}
+#insta {
+  margin-bottom: 20%;
+  left: 5%;
+}
+#insta:hover {
+  background-image: linear-gradient(
+    to top,
+    #405de6,
+    #5b51d8,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d,
+    #f56040,
+    #f77737,
+    #fcaf45,
+    #ffdc80
+  );
+  border-radius: 100px;
+}
+#git {
+  margin-bottom: 40%;
+  left: 8.5%;
+}
+#git:hover {
+  color: #333;
+}
+#in {
+  margin-top: 20%;
+  left: 5%;
+}
+#in:hover {
+  color: #0077b5;
+}
+#yo {
+  margin-top: 40%;
+  left: 8.5%;
+}
+#yo:hover {
+  color: #ff0000;
+}
+#wht {
+  margin-top: 60%;
+  left: 16.5%;
+}
+#wht:hover {
+  color: #25d366;
+}
+.signTitle {
+  height: fit-content;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.divSignIn,
+.divSignUp {
+  background-color: white;
+  height: 200px;
+  position: fixed;
+  width: 16%;
+  right: 2.9%;
+  z-index: 100;
+  border-radius: 5px;
+  top: 50px;
+  transform: translateY(-150%);
+  transition: 1s all;
+}
+.divSignUp {
+  right: 22%;
+  height: 250px;
+}
+.active {
+  transform: translateY(0);
+}
+.input {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
+}
+.email,
+.password {
+  width: 90%;
+  padding: 3px;
+  border-radius: 5px;
+  border-color: var(--BtnColor--);
+  outline: none;
+  transition: 0.5s all;
+}
+.email:hover,
+.password:hover {
+  box-shadow: 0 0 10px var(--BtnColor--);
+}
+.login {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#login,
+#CreatAccount {
+  padding: 5px;
+  width: 50%;
+  border-radius: 5px;
+
+  border: none;
+  transition: 0.5s all;
+}
+#CreatAccount:hover,
+#login:hover {
+  background-color: var(--BtnColor--);
+  color: white;
+  box-shadow: 0px 0px 10px var(--BtnColor--);
+}
+.fa-unlock {
+  color: var(--BtnColor--);
+  font-size: 15px;
+  position: fixed;
+  left: 80%;
+}
+.fa-lock {
+  color: var(--BtnColor--);
+  font-size: 15px;
+  position: fixed;
+  left: 80%;
+}
+
+#iconeDiv,
+#iconeDiv1 {
+  width: fit-content;
+  height: fit-content;
+  padding-bottom: 8%;
+}
+.doneCreat {
+  font-size: 15px;
+  text-align: center;
+  font-weight: 700;
+  color: #25d366;
+}
+.Account {
+  width: 25%;
+  height: 90%;
+  border: 2px solid var(--BtnColor--);
+  border-radius: 5px;
+  display: none;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.fa-user {
+  color: var(--BtnColor--);
+  z-index: 500;
+  display: block;
+  position: relative;
+}
+.AccountShow {
+  display: flex;
+}
+#newAccount {
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  padding: 5px;
+  color: #1da1f2;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+#newAccount:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 10px var(--BtnColor--);
+}
+
+.textPage {
+  color: white;
+  margin-left: 10%;
+}
+.char {
+  color: var(--BtnColor--);
+}
+.shopNow {
+  background-color: var(--BtnColor--);
+  padding: 10px;
+  width: 30%;
+  border: none;
+  border-radius: 50px;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  left: 50%;
+  transition: 0.5s all;
+  font-weight: 500;
+}
+.shopNow:hover {
+  transform: scale(1.1);
+  box-shadow: inset 0 0 50px whitesmoke;
+}
+
+.page2 {
+  background-color: var(--mainColor--);
+  width: 100%;
+  height: 100vh;
+
+  color: white;
+}
+.title2Page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 90px;
+  font-size: 60px;
+  user-select: none;
+}
+.NameSite {
+  color: var(--BtnColor--);
+  padding-left: 10px;
+}
+.desc {
+  width: 60%;
+  font-size: 30px;
+  text-align: center;
+}
+.descDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.linkPro {
+  width: 100%;
+  display: grid;
+  height: 100px;
+  place-content: center center;
+  margin-top: 100px;
+  font-size: 20px;
+
+  color: var(--BtnColor--);
+  transition: 0.5s all;
+}
+.fa-arrow-down {
+  color: var(--BtnColor--);
+  text-align: center;
+  padding-top: 20px;
+  transition: 0.5s all;
+}
+
+#goto {
+  cursor: pointer;
+}
+
+.linkPro:hover > .fa-arrow-down {
+  text-shadow: 0 0 10px var(--BtnColor--);
+  transform: translateY(10px);
+  font-size: 35px;
+}
+.linkPro:hover {
+  text-shadow: 0 0 10px var(--BtnColor--);
+  transform: translateY(10px);
+}
+
+.page3 {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--mainColor--);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.imgDiv {
+  width: 30%;
+  height: 60%;
+  box-shadow: 0 0 100px var(--BtnColor--);
+  overflow: hidden;
+}
+.img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: 0.5s all;
+}
+.img:hover {
+  transform: scale(1.1);
+}
+.titlePage3 {
+  color: var(--BtnColor--);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.txtImg {
+  width: 30%;
+  height: 60%;
+  display: grid;
+  gap: 5px;
+  justify-content: center;
+}
+.pPage3 {
+  color: white;
+  display: flex;
+  text-align: center;
+
+  font-size: 20px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.btnPage3 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+}
+.btn3 {
+  padding: 10px;
+  width: 60%;
+  background-color: var(--BtnColor--);
+  border-radius: 50px;
+  border: 1px solid var(--BtnColor--);
+  font-weight: 500;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  transition: 0.5s all;
+}
+.btn3:hover {
+  background-color: var(--mainColor--);
+  box-shadow: 0 0 10px var(--BtnColor--);
+}
+.fa-arrow-right {
+  position: relative;
+  font-size: 25px;
+  transition: 0.5s all;
+}
+.btn3:hover > .fa-arrow-right {
+  transform: translateX(80%);
+  text-shadow: 0 0 20px var(--BtnColor--);
+  color: var(--BtnColor--);
+}
+#AboutSite {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--mainColor--);
+  color: white;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.box {
+  height: 75%;
+  width: 25%;
+  display: grid;
+  justify-content: center;
+  transition: 0.5s all;
+}
+.box:hover {
+  border: 1px solid var(--BtnColor--);
+  transform: scale(1.2);
+  box-shadow: 0 0 10px var(--BtnColor--);
+}
+.icone {
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleBox {
+  text-align: center;
+}
+.descBox {
+  text-align: center;
+}
+.btnBox {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.buttonBox {
+  padding: 10px;
+  width: 50%;
+  background-color: var(--BtnColor--);
+  color: white;
+  transition: 0.5s all;
+  border: 1px solid var(--BtnColor--);
+}
+.buttonBox:hover {
+  background-color: var(--mainColor--);
+}
+.fottor {
+  width: 100%;
+  height: 50vh;
+  background-image: url(./img/img4.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  /* filter: blur(2px);
+-webkit-filter: blur(2px); */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.fotor {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  text-align: center;
+}
+.fotor3 {
+  color: white;
+  width: 100%;
+  background-color: rgb(12, 12, 11);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+/*
+.fa-discord{
+  transition: 1s all;
+  position: relative;
+}
+.fa-discord:hover{
+  color: #5865F2;
+}
+.fa-facebook{
+  transition: 1s all;
+  position: relative;
+}
+.fa-facebook:hover{
+  color: #4267B2;
+}
+.fa-github{
+  position: relative;
+  transition: 1s all;
+}
+.fa-github:hover{
+  color: #4267B2;
+}
+.links{
+width: 50%;
+height: fit-content;
+display: flex;
+justify-content: space-evenly;
+text-align: center;
+}
+.fa-instagram{
+  position: relative;
+  transition: 1s all;
+} */

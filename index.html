@@ -19,9 +19,12 @@
         font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
       }
     </style>
+    <script
+      src="https://kit.fontawesome.com/0714cf5ec4.js"
+      crossorigin="anonymous"></script>
   </head>
   <body style="overflow-x: hidden">
-    <div style="display: block" id="Div_Video">
+    <div style="display: none" id="Div_Video">
       <video
         class="video"
         autoplay
@@ -29,14 +32,14 @@
         loop
         src=".\vid\pexels-rostislav-uzunov-9867271.mp4"></video>
     </div>
-    <div style="display: flex" class="divGame">
+    <div style="display: none" class="divGame">
       <button id="btnGame">
         STARTE GAME NOW
         <span class="material-symbols-outlined"> sports_esports </span>
       </button>
     </div>
     <!-- here for content -->
-    <div style="display: none" id="Page">
+    <div id="Page" class="allpage">
       <div class="Div_Nav">
         <h2>Gamin<span style="color: var(--BtnColor--)">g</span></h2>
         <ul>
@@ -50,10 +53,101 @@
           <li>Contact <span class="material-symbols-outlined"> call </span></li>
           <li>About <span class="material-symbols-outlined"> groups </span></li>
         </ul>
-        <div id="signUp">sign up</div>
-        <div id="signIn">sign in</div>
+        <div id="btn_SginUp" class="signUp">sign up</div>
+        <div id="btn_Sign" class="signIn">sign in</div>
+        <div id="User" class="Account">
+          <i class="fa-solid fa-user"></i>
+          <h4 id="name"></h4>
+        </div>
       </div>
-      <div class="fristPage">
+      <!-- form number 1  -->
+      <div id="form1" class="divSignUp">
+        <h3 class="signTitle">
+          <span style="color: var(--BtnColor--)">S</span>ign up
+        </h3>
+
+        <div class="inputs">
+          <div class="input">
+            <input
+              id="email_up"
+              class="email"
+              type="email"
+              placeholder="Email or UserName " />
+          </div>
+          <div class="input">
+            <input
+              id="Password_up"
+              class="password"
+              type="password"
+              placeholder="Password" />
+            <div id="iconeDiv1">
+              <i id="lock1" class="fa-solid fa-lock"></i>
+              <i id="unlock1" class="fa-solid fa-unlock"></i>
+            </div>
+          </div>
+          <div class="input">
+            <input
+              id="Password_up_confirm"
+              class="password"
+              type="password"
+              placeholder="Confirm Password" />
+            <div id="iconeDiv2">
+              <i id="lock2" class="fa-solid fa-lock"></i>
+              <i id="unlock2" class="fa-solid fa-unlock"></i>
+            </div>
+          </div>
+          <div class="login">
+            <button id="CreatAccount" class="btnLogin">Login</button>
+          </div>
+        </div>
+        <div style="width: 100%" id="done"></div>
+      </div>
+      <!-- form number 2 -->
+      <!-- </div> -->
+      <div id="form2" class="divSignIn">
+        <h3 class="signTitle">
+          <span style="color: var(--BtnColor--)">S</span>ign In
+        </h3>
+
+        <div class="inputs">
+          <div class="input">
+            <input
+              id="email_in"
+              class="email"
+              type="email"
+              placeholder="Email or UserName " />
+          </div>
+          <div class="input">
+            <input
+              id="password_in"
+              class="password"
+              type="password"
+              placeholder="Password" />
+            <div id="iconeDiv">
+              <i id="lock" class="fa-solid fa-lock"></i>
+
+              <i id="unlock" class="fa-solid fa-unlock"></i>
+            </div>
+          </div>
+          <div class="login">
+            <button id="login" class="btnLogin">Login</button>
+          </div>
+          <div id="newAccount">CreatAccount ?</div>
+        </div>
+      </div>
+      <!-- page content -->
+      <div class="fristPage" id="background-canvas">
+        <div class="textPage">
+          <h4>
+            <span class="char">Y</span>assin <span class="char">G</span>ames
+          </h4>
+          <h1><span class="char">Y</span>our one-stop video game center</h1>
+          <button class="shopNow">
+            Shop now
+            <i style="position: relative" class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
         <div class="Cercle">
           <img
             class="gtasidi"
@@ -64,10 +158,180 @@
             id="music"
             src=".\audio\GTA San Andreas Theme Song Full ! ! (128 kbps).mp3"></audio>
 
-          div
+          <div class="social"></div>
+          <i id="wht" class="fa-brands fa-whatsapp"></i>
+          <i id="in" class="fa-brands fa-linkedin"></i>
+
+          <i id="fa" class="fa-brands fa-facebook"></i>
+          <i id="yo" class="fa-brands fa-youtube"></i>
+          <i id="insta" class="fa-brands fa-instagram"></i>
+          <i id="git" class="fa-brands fa-github"></i>
+          <i id="twit" class="fa-brands fa-twitter"></i>
         </div>
       </div>
+
+      <div id="page2" class="page2">
+        <div class="text">
+          <h1 class="title2Page">
+            Shop at <span class="NameSite"> Gaming</span>
+          </h1>
+          <div class="descDiv">
+            <p class="desc">
+              Looking for the latest releases? Or are retro classics more your
+              thing? At <span class="NameSite">Gaming</span>, we stock a wide
+              selection of titles for every kind of gamer.
+            </p>
+          </div>
+          <div class="linkPro">
+            <h5 id="goto">OUR GAME COLLECTION</h5>
+            <i
+              id="arrow"
+              style="position: relative"
+              class="fa-solid fa-arrow-down"></i>
+          </div>
+        </div>
+      </div>
+      <div id="page3" class="page3">
+        <div class="imgDiv">
+          <img class="img" src="./img/img1.jpg" alt=" img" />
+        </div>
+        <div class="txtImg">
+          <div class="titlePage3"><h1>Real time Strategy games</h1></div>
+          <div class="pPage3">
+            <p>
+              Challenge yourself in a battle of wits and skill vs NPCs and other
+              players alike.
+            </p>
+          </div>
+          <div class="btnPage3">
+            <button class="btn3">
+              See more<i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="page4" class="page3">
+        <div class="txtImg">
+          <div class="titlePage3"><h1>RRole-playing games</h1></div>
+          <div class="pPage3">
+            <p>
+              Lose yourself in exotic worlds where your mission is to save the
+              day.
+            </p>
+          </div>
+          <div class="btnPage3">
+            <button class="btn3">
+              See more<i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="imgDiv">
+          <img class="img" src="./img/img2.jpg" alt=" img" />
+        </div>
+      </div>
+
+      <div id="page5" class="page3">
+        <div class="imgDiv">
+          <img class="img" src="./img/img3.jpg" alt=" img" />
+        </div>
+        <div class="txtImg">
+          <div class="titlePage3"><h1>casual games</h1></div>
+          <div class="pPage3">
+            <p>
+              A collection of unique and quirky games to while away your day.
+            </p>
+          </div>
+          <div class="btnPage3">
+            <button class="btn3">
+              See more<i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="AboutSite">
+        <!-- box 1 -->
+        <div class="box">
+          <div class="icone">
+            <i style="position: relative" class="fa-solid fa-gamepad"></i>
+          </div>
+          <div class="titleBox">Many games</div>
+          <div class="descBox">
+            We have more modern and famous games such as Football, Ninja, Grand
+            Theft Auto, God of War and many games with high quality and little
+            price
+          </div>
+          <div class="btnBox">
+            <button class="buttonBox">READ MORE</button>
+          </div>
+        </div>
+        <!-- box 2 -->
+        <div class="box">
+          <div class="icone">
+            <i style="position: relative" class="fa-solid fa-trophy"></i>
+          </div>
+          <div class="titleBox">International competitions</div>
+          <div class="descBox">
+            We join international competitions in many games, especially
+            survival and battle royale games, with many prizes and a lot of
+            money. You can also participate in game competitions. Read more to
+            know how to participate.
+          </div>
+          <div class="btnBox">
+            <button class="buttonBox">READ MORE</button>
+          </div>
+        </div>
+        <!-- box 3 -->
+        <div class="box">
+          <div class="icone">
+            <i style="position: relative" class="fa-solid fa-heart"></i>
+          </div>
+          <div class="titleBox">Exclusive games</div>
+          <div class="descBox">
+            Our company has a partnership with many large companies such as
+            Sony, Rockstar Games and Samsung, and this is what makes us have
+            high quality games.
+          </div>
+          <div class="btnBox">
+            <button class="buttonBox">READ MORE</button>
+          </div>
+        </div>
+      </div>
+      <div class="fottor">
+        <div class="fotor">
+          <h1 class="NameSite">Games</h1>
+          <p>
+            A site for selling games and shipping games and tournaments. We are
+            honored to visit you on the Discord server
+          </p>
+        </div>
+        <div class="fotor">
+          <h1 class="NameSite">ABOUT DEVLOPPER</h1>
+          <p>
+            Hello, my name is Yassin, 18 years old, a Moroccan programmer and
+            web developer. I work as a freelancer. If anyone is interested,
+            please contact me
+          </p>
+        </div>
+      </div>
+      <div class="fotor3">
+        <p>© 2022 GAMES | Yassin Ait Elhardouf</p>
+      </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script>
+      VANTA.NET({
+        el: "#background-canvas",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: true,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+      });
+    </script>
     <script src="script.js"></script>
+    <script src="login.js"></script>
   </body>
 </html>
